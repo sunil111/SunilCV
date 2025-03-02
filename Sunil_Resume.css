@@ -1,0 +1,791 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f9fa !important; /*#;*/
+    /*font-family: 'Arial', sans-serif;*/
+}
+
+/*--------------------------------------------Navbar---------------------------------------------*/
+
+.navbar{
+    background-color: #000000 !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    user-select: none; 
+    -webkit-user-drag: none; 
+    user-drag: none; 
+}
+.navbar-brand{
+    font-size: 2em !important;
+    font-family: "Great Vibes", serif;
+    font-weight: 400;
+    padding: 0px 50px !important;
+    -webkit-user-drag: none; 
+    user-drag: none;     
+}
+
+.navbar-toggler {
+    border-color: white !important; /* Makes the border visible */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+.navbar-brand{
+    color: #ffffff !important;
+}
+
+.nav-link{
+    padding: 20px 20px !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+.nav-link:hover{
+    color: #000000 !important;
+    background-color: #f8f9fa !important;
+}
+
+.item1{
+    background-color: #FFB200 !important;
+}
+.item2{
+    background-color: #FBA518 !important;
+}
+.item3{
+    background-color: #EB5B00 !important;
+}
+.item4{
+    background-color: #D91656 !important;
+}
+.item5{
+    background-color: #493D9E !important;
+}
+.item6{
+    background-color: #3674B5 !important;
+}
+
+/*--------------------------------------------Landing Page---------------------------------------------*/
+
+.landingpage{
+    margin: 0px 0px !important;
+    padding: 150px 0px !important;
+    min-height: 800px !important;
+    text-align: center !important;
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    user-select: none !important;
+}
+
+.profile-img-container {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    width: 450px; 
+    height: 550px;
+    background-color: #ffffff !important;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #f8f9fa;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    /*object-fit: cover; /* Ensure image fits properly */
+    pointer-events: none;
+}
+
+.IntroDash{
+    margin: 80px 0px 0px 0px !important;
+}
+
+.IntroDash .hello{
+    margin: 0px 0px 0px 0px !important;
+    font-size: 5em !important;
+    font-family: "Great Vibes", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.IntroDash .name{
+    margin: 10px 0px 0px 0px !important;
+    font-size: 8em !important;
+    font-family: "Rokkitt", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.IntroDash .designation{
+    margin: 20px 0px 0px 0px !important;
+    font-family: "Lora", serif;
+    font-size: 2.5em !important;
+    font-style: normal;
+    font-weight: 700;
+}
+.IntroDash .skills{
+    margin: 20px 0px 0px 0px !important;
+    font-family: "Lora", serif;
+    font-size: 1.2em !important;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.cvbtngrp .btncv, .cvbtngrp .btnhire {
+    font-family: "Lora", serif;    
+    padding: 10px 20px;
+    margin: 30px 10px;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 25px;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: background 0.4s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.cvbtngrp .btncv {
+    background-color: #674188;
+    border-color: #674188;
+}
+
+.cvbtngrp .btnhire {
+    background-color: #399918;
+    border-color: #399918;
+}
+
+.cvbtngrp .btncv::after, 
+.cvbtngrp .btnhire::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.4s ease-in-out;
+}
+
+.cvbtngrp .btncv:hover {
+    background-color: transparent;
+    color: #674188; 
+    border: 2px solid #674188;
+}
+
+.cvbtngrp .btnhire:hover {
+    background-color: transparent;
+    color: #399918;
+    border: 2px solid #399918;
+}
+
+.cvbtngrp .btncv:hover::after, 
+.cvbtngrp .btnhire:hover::after {
+    left: 100%;
+}
+
+.cvbtngrp .btncv:not(:hover)::after, 
+.cvbtngrp .btnhire:not(:hover)::after {
+    left: -100%;
+    transition: left 0.4s ease-in-out;
+}
+
+
+/*--------------------------------------------About ME---------------------------------------------*/
+
+.aboutus{
+    margin: 0px 0px !important;
+    padding: 0px 0px !important;
+    min-height: 500px !important;
+    background-color: #FBFFE4 !important;
+    color: #000000 !important;
+    user-select: none !important;
+}
+
+.aboutus .header{
+    background-color: #FBA518 !important;
+    padding: 80px 0px 30px 0px !important;
+    text-align: center !important;
+    margin: 0px -10px 0px -10px !important;
+    font-size: 2.5em !important;
+    font-family: "Markazi Text", serif;
+    color: #FBFFE4;
+}
+
+.abtname p{
+    text-align: center!important;
+    padding-top: 20%;
+    padding-left: 10%;
+    font-size: 3em;
+    font-family: "Great Vibes", serif;
+    font-weight: 700 !important;
+}
+
+.deatailsInfo{
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    text-align: justify;
+    font-family: "Lora", serif !important;
+    padding: 0px 50px !important;
+}
+
+.deatailsInfo .dtlinfo{
+    padding: 30px 0px !important;
+}
+
+.detailsabout{
+    font-family: "Lora", serif !important;
+    font-size: 1.1em;
+    padding-left: 50px;
+    color: #0C0C0C;
+}
+
+.detailsabout .fa-solid{
+    padding-right: 20px;
+}
+
+.detailsabout div{
+    padding: 10px 0px;
+}
+
+.projectcounter{
+    margin: 30px 0px 0px 0px !important;
+    font-family: "Lora", serif;
+}
+
+.detailsabout .email-link{
+    color: #0C0C0C !important;
+    text-decoration: none;
+}
+
+.detailsabout .phone-link{
+    color: #0C0C0C !important;
+    text-decoration: none;
+}
+
+.detailsabout .map-link{
+    color: #0C0C0C !important;
+    text-decoration: none;
+}
+
+.detailsabout .email-link:hover{
+    color: #0C359E !important;
+}
+
+.detailsabout .phone-link:hover{
+    color: #0C359E !important;
+}
+
+.detailsabout .map-link:hover{
+    color: #0C359E !important;
+}
+
+.counterWeb {
+    font-size: 3em;
+    font-weight: bold;
+    color: #F5004F;
+}
+
+.counterMvc {
+    font-size: 3em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.counterFront {
+    font-size: 3em;
+    font-weight: bold;
+    color: #7C00FE;
+}
+
+.counterTot {
+    font-size: 3em;
+    font-weight: bold;
+    color: #3A7D44;
+}
+
+.card{
+    margin: 0px 20px;
+    padding: 20px 0px;
+    text-align: center;
+    background-color: #FBFFE4 !important;
+    border: 2px #fff !important;
+}
+
+.card-text{
+    font-weight: 500;
+    font-size: 1em;
+    color: #000000 !important;
+}
+
+/*--------------------------------------------Skills Set---------------------------------------------*/
+
+.skillsset{
+    margin: 0px 0px !important;
+    padding: 0px 0px !important;
+    min-height: 500px !important;
+    background-color: #FBFFE4 !important;
+    color: #000000 !important;
+    user-select: none !important;
+}
+
+.skillsset .header{
+    background-color: #EB5B00 !important;
+    padding: 80px 0px 30px 0px !important;
+    text-align: center !important;
+    margin: 0px -10px 0px -10px !important;
+    font-size: 2.5em !important;
+    font-family: "Markazi Text", serif;
+    color: #FBFFE4;
+}
+
+.skillsInfo {
+    padding: 50px 50px 50px 50px;
+    font-family: "Lora", serif !important;
+}
+
+.skillsInfo .headerExp{
+    margin-left: 10%;
+    padding: 0px 0px 0px 0px;
+    font-size: 1.5em;
+}
+
+.skillsInfo .headerinfo{
+    margin-left: 10%;
+    padding: 0px 50px 20px 50px;
+    text-align: justify;
+}
+
+.skillsset .container{
+   padding: 0px 30px; 
+}
+
+.skillsset .progName{
+    font-size: 16px;
+    padding-bottom: 0px;
+}
+
+.skillsset .progNameDtls{
+    font-size: 13px;
+}
+
+.skillsset .progress {
+    height: 20px;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: #e9ecef;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+
+}
+.skillsset .progress-bar {
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 16px;
+    transition: width 2s ease-in-out;
+}
+
+.skillsset .progress8 .progress-bar {
+    background-color: #EB5B00 !important; /* Set the background color */
+    color: white !important; /* Ensure text is readable */
+}
+
+/*--------------------------------------------Experience---------------------------------------------*/
+
+.experience{
+    margin: 0px 0px !important;
+    padding: 0px 0px !important;
+    min-height: 500px !important;
+    background-color: #FBFFE4 !important;
+    color: #000000 !important;
+    user-select: none !important;
+}
+
+.experience .header{
+    background-color: #D91656 !important;
+    padding: 80px 0px 30px 0px !important;
+    text-align: center !important;
+    margin: 0px -10px 0px -10px !important;
+    font-size: 2.5em !important;
+    font-family: "Markazi Text", serif;
+    color: #FBFFE4;
+}
+
+.experiencename p{
+    text-align: center!important;
+    padding-top: 20%;
+    padding-left: 10%;
+    font-size: 3em;
+    font-family: "Great Vibes", serif;
+    font-weight: 700 !important;
+}
+
+.experience .experienceInfo{
+    font-family: "Lora", serif !important;
+    padding: 0px 50px;
+}
+
+.experience .headerExp{
+    padding: 50px 0px 0px 0px;
+    font-size: 1.5em;
+}
+
+.experience .headerinfo{
+    font-size: 1em;
+    text-align: justify;
+}
+
+.company-img1{
+    height: 100px;
+    width: 250px;
+    display: block !important;
+    margin: 0 auto !important;
+    pointer-events: none; 
+    user-select: none; 
+    -webkit-user-drag: none;    
+}
+
+.company-img2{
+    height: 150px;
+    width: 150px;
+    display: block !important;
+    margin: 0 auto !important;
+    pointer-events: none; 
+    user-select: none; 
+    -webkit-user-drag: none;    
+}
+
+.company-img3{
+    height: 150px;
+    width: 150px;
+    display: block !important;
+    margin: 0 auto !important;
+    pointer-events: none; 
+    user-select: none; 
+    -webkit-user-drag: none;    
+}
+
+.company-img4{
+    height: 150px;
+    width: 300px;
+    display: block !important;
+    margin: 0 auto !important;
+    pointer-events: none; 
+    user-select: none; 
+    -webkit-user-drag: none;    
+}
+
+.job{
+    margin: 50px 0px 50px 0px;
+}
+
+.jobposition{
+    font-size: 20px;
+    text-align: justify;
+    font-weight: 700;
+}
+
+.yeardtls{
+    font-size: 16px;
+    text-align: justify;
+}
+
+.jobdtl{
+    font-size: 14px;
+    text-align: justify;
+}
+
+/*--------------------------------------------Education---------------------------------------------*/
+
+.education{
+    margin: 0px 0px !important;
+    padding: 0px 0px !important;
+    min-height: 500px !important;
+    background-color: #FBFFE4 !important;
+    color: #000000 !important;
+    user-select: none !important;
+}
+
+.education .header{
+    background-color: #493D9E !important;
+    padding: 80px 0px 30px 0px !important;
+    text-align: center !important;
+    margin: 0px -10px 0px -10px !important;
+    font-size: 2.5em !important;
+    font-family: "Markazi Text", serif;
+    color: #FBFFE4;
+}
+
+.education .educationInfo{
+    font-family: "Lora", serif !important;
+    padding: 0px 50px;
+}
+
+.educationname p{
+    text-align: center!important;
+    padding-top: 20%;
+    padding-left: 10%;
+    font-size: 3em;
+    font-family: "Great Vibes", serif;
+    font-weight: 700 !important;
+}
+
+.education .headerExp{
+    padding: 50px 0px 0px 0px;
+    font-size: 1.5em;
+}
+
+.education .headerinfo{
+    font-size: 1em;
+    text-align: justify;
+}
+
+.education-img1{
+    height: 150px;
+    width: 250px;
+    pointer-events: none; 
+    user-select: none; 
+    -webkit-user-drag: none;    
+}
+
+.education-img2{
+    height: 150px;
+    width: 150px;
+    pointer-events: none; 
+    user-select: none; 
+    -webkit-user-drag: none;    
+}
+
+
+.edu{
+    margin: 50px 0px 50px 0px;
+}
+
+.educationPost{
+    font-size: 20px;
+    text-align: justify;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+
+.yeardtls{
+    font-size: 16px;
+    text-align: justify;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-weight: 600;
+}
+.yeardtls1{
+    font-size: 14px;
+    text-align: justify;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-weight: 600;
+}
+.yeardtls2{
+    font-size: 14px;
+    text-align: justify;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-weight: 600;
+}
+
+/*--------------------------------------------Contact US---------------------------------------------*/
+
+.contactus{
+    margin: 0px 0px !important;
+    padding: 0px 0px !important;
+    min-height: 500px !important;
+    background-color: #FBFFE4 !important;
+    color: #000000 !important;
+    user-select: none;
+}
+
+.contactus .header{
+    background-color: #3674B5 !important;
+    padding: 80px 0px 30px 0px !important;
+    text-align: center !important;
+    margin: 0px -10px 0px -10px !important;
+    font-size: 2.5em !important;
+    font-family: "Markazi Text", serif;
+    color: #FBFFE4;
+}
+
+.contactusname p{
+    text-align: center!important;
+    padding-top: 20%;
+    padding-left: 10%;
+    font-size: 3em;
+    font-family: "Great Vibes", serif;
+    font-weight: 700 !important;
+}
+
+.contactus .headerExp{
+    padding: 50px 0px 50px 50px;
+    font-size: 2em;
+}
+
+.contInfo{
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    font-family: "Lora", serif !important;
+    padding: 0px 50px;
+}
+
+.condetails{
+    font-family: "Lora", serif;
+    font-size: 17px;
+    margin: 50px 0px;
+    transition: all 0.5s ease-in-out;
+    padding: 0px 50px;
+}
+
+.condetails .fa-solid{
+    padding-right: 20px;
+    font-size: 2.5em;
+    transition: transform 0.9s ease-in-out;
+}
+
+/* Rotate 360° on hover */
+.condetails:hover .fa-solid {
+    transform: rotate(360deg);
+}
+
+/* Rotate back to -360° when hover out */
+.condetails:not(:hover) .fa-solid {
+    transform: rotate(0deg);
+}
+
+.condetails strong{
+    font-size: 1.8em;
+}
+
+.condetails .contAdd{
+    font-size: 1em;
+    margin: 10px 0px;
+}
+
+.condetails .contAdd .map-link{
+    color: #000000 !important;
+    text-decoration: none;
+}
+
+.condetails .contAdd .map-link:hover{
+    color: #D71313 !important;
+}
+
+.condetails .contmail{
+    font-size: 1em;
+    margin: 10px 0px;
+}
+
+.condetails .contmail .email-link{
+    color: #000000 !important;
+    text-decoration: none;
+}
+
+.condetails .contmail .email-link:hover{
+    color: #D71313 !important;
+}
+
+.condetails .contph{
+    font-size: 1em;
+    margin: 10px 0px;
+}
+
+.condetails .contph .phone-link{
+    color: #000000 !important;
+    text-decoration: none;
+}
+
+.condetails .contph .phone-link:hover{
+    color: #D71313 !important;
+}
+
+
+.socialgroup{
+    margin: 50px 0px;
+}
+
+.socialgroup button{
+    margin: 0px 15px !important;
+}
+
+.socialgroup .fbic{
+    padding: 2px 2px;
+    font-size: 2.5em;
+}
+
+.socialgroup .fb:hover,
+.socialgroup .fb .fbic:hover {
+    color: #3e65cf;
+}
+
+.socialgroup .gmic{
+    padding: 2px 2px;
+    font-size: 2.5em;
+}
+
+.socialgroup .gmail:hover,
+.socialgroup .gmail .gmic:hover {
+    color: #c71610;
+}
+
+.socialgroup .waspic{
+    padding: 2px 2px;
+    font-size: 2.5em;
+}
+
+.socialgroup .whatsapp:hover,
+.socialgroup .whatsapp .waspic:hover {
+    color: #25d366;
+}
+
+.socialgroup .lnkic{
+    padding: 2px 2px;
+    font-size: 2.5em;
+}
+
+.socialgroup .linkdn:hover,
+.socialgroup .linkdn .lnkic:hover {
+    color: #0077B5;
+}
+
+.socialgroup .fb{
+    background-color: #3e65cf;
+    color: #ffffff;
+}
+
+.socialgroup .gmail{
+    background-color: #c71610;
+    color: #ffffff;
+}
+
+.socialgroup .whatsapp{
+    background-color: #25d366;
+    color: #ffffff;
+}
+
+.socialgroup .linkdn{
+    background-color: #0077B5;
+    color: #ffffff;
+}
+
+/*--------------------------------------------Contact US---------------------------------------------*/
+
+.footer .footertext{
+    background-color: #45474B !important;
+    padding: 20px 0px 0px 0px !important;
+    text-align: center !important;
+    margin: 0px 0px 0px 0px !important;
+    font-size: 1em !important;
+    font-family: "Markazi Text", serif;
+    color: #FBFFE4;
+    user-select: none;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
