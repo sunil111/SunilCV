@@ -73,31 +73,76 @@ body {
 
 .landingpage{
     margin: 0px 0px !important;
-    padding: 150px 0px !important;
+    padding: 150px 50px !important;
     min-height: 800px !important;
     text-align: center !important;
-    background-color: #FFFFFF !important;
+    background-color: #ffffff !important;
     color: #000000 !important;
     user-select: none !important;
+}
+
+.profile-img {
+    width: 100%;
+    pointer-events: none;
+    height: calc(100% - 4px);
+    border-radius: 50%; 
+    z-index: 5;
 }
 
 .profile-img-container {
     pointer-events: none;
     user-select: none;
     -webkit-user-drag: none;
-    width: 450px; 
+    width: 450px;
     height: 550px;
     background-color: #ffffff !important;
     overflow: hidden;
     border-radius: 50%;
-    border: 2px solid #f8f9fa;
+    position: relative;   
+    z-index: 0;  
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -2;
+        left: -50%;
+        top: -50%;
+        width: 200%;
+        height: 200%;
+        background-color: #ffffff;
+        background-repeat: no-repeat;
+        /*background-size: 50% 50%, 50% 50%;*/
+        background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+        background-image:   linear-gradient(#00E4FF, #00E4FF),  
+                            linear-gradient(#ffffff, #ffffff),  
+                            linear-gradient(#00E4FF, #00E4FF),  
+                            linear-gradient(#ffffff, #ffffff); 
+        /*background-image:   linear-gradient(#399953, #399953),  00E4FF
+                            linear-gradient(#fbb300, #fbb300), 
+                            linear-gradient(#d53e33, #d53e33), 
+                            linear-gradient(#377af5, #377af5);*/                          
+        animation: rotate 4s linear infinite;
+        background-size: 35% 50%, 35% 50%;
+        filter: blur(20px);
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 6px;
+        top: 6px;
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
+        background: #ffffff;
+        border-radius: 50%;      
+    }
 }
 
-.profile-img {
-    width: 100%;
-    height: 100%;
-    /*object-fit: cover; /* Ensure image fits properly */
-    pointer-events: none;
+@keyframes rotate {
+    100% {
+        transform: rotate(1turn);
+    }
 }
 
 .IntroDash{
@@ -125,6 +170,7 @@ body {
     font-style: normal;
     font-weight: 700;
 }
+
 .IntroDash .skills{
     margin: 20px 0px 0px 0px !important;
     font-family: "Lora", serif;
@@ -192,6 +238,40 @@ body {
     transition: left 0.4s ease-in-out;
 }
 
+@media (max-width: 500px) {
+    .landingpage{
+        padding: 100px 50px !important;
+        min-height: 800px !important;
+    }
+
+    .IntroDash{
+        margin: 0px 0px 0px 0px !important;
+    }
+
+    .IntroDash .hello{
+        font-size: 3.5em !important;
+        font-weight: 400;
+    }
+    .IntroDash .name{
+        margin: 10px 0px 0px 0px !important;
+        font-size: 4em !important;
+        font-weight: 700;
+    }
+    .IntroDash .designation{
+        margin: 20px 0px 0px 0px !important;
+        font-size: 2em !important;
+        font-weight: 500;
+    }
+
+    .IntroDash .skills{
+        font-size: 1em !important;
+    }
+
+    .cvbtngrp .btncv, .cvbtngrp .btnhire {   
+        padding: 10px 10px;
+        margin: 30px 10px 80px 10px;
+    } 
+}
 
 /*--------------------------------------------About ME---------------------------------------------*/
 
@@ -199,87 +279,120 @@ body {
     margin: 0px 0px !important;
     padding: 0px 0px !important;
     min-height: 500px !important;
-    background-color: #FBFFE4 !important;
-    color: #000000 !important;
+    background-color: #f8f9fa !important; /*#f8f9fa !important;*/
+    color: #0C0C0C !important;
     user-select: none !important;
 }
 
 .aboutus .header{
     background-color: #FBA518 !important;
-    padding: 80px 0px 30px 0px !important;
+    padding: 90px 0px 30px 0px !important;
     text-align: center !important;
     margin: 0px -10px 0px -10px !important;
     font-size: 2.5em !important;
-    font-family: "Markazi Text", serif;
+    font-family: "Great Vibes", serif;
     color: #FBFFE4;
 }
 
 .abtname p{
     text-align: center!important;
-    padding-top: 20%;
+    padding-top: 1%;
     padding-left: 10%;
     font-size: 3em;
     font-family: "Great Vibes", serif;
     font-weight: 700 !important;
 }
 
+.proimg{
+    height: 120px;
+    width: 120px;
+    background-color: #D3D3D2;
+    border-radius: 50%;
+    border: 2px solid #00FFFF;
+    box-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 15px #00FFFF; 
+    text-align: center;
+    padding-left: 2px;
+    padding-top: 20px;    
+}
+
+.proimg { filter: brightness(150%); }
+.proimg { filter: saturate(200%); }
+/*.proimg { filter: drop-shadow(2px 2px 5px #000); }*/
+
+.pro{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    pointer-events: none; 
+    user-select: none; 
+    -webkit-user-drag: none;  
+    padding-left:55px; 
+    padding-top: 20%;  
+}
+
 .deatailsInfo{
     margin-top: 50px !important;
     margin-bottom: 50px !important;
-    text-align: justify;
     font-family: "Lora", serif !important;
     padding: 0px 50px !important;
 }
 
 .deatailsInfo .dtlinfo{
     padding: 30px 0px !important;
+    text-align: justify;
+    font-size: 1em;
 }
 
 .detailsabout{
-    font-family: "Lora", serif !important;
     font-size: 1.1em;
     padding-left: 50px;
-    color: #0C0C0C;
+    color: #0C0C0C; /*#0C0C0C;*/
+    font-weight: 500;
 }
 
 .detailsabout .fa-solid{
-    padding-right: 20px;
+    padding-right: 25px;
+    color: ##D3D3D3; /*#0C0C0C !important;*/
+    transition: all 0.3s ease-in-out;
+}
+
+.detailsabout:hover .fa-solid,
+.detailsabout div:hover ~ .fa-solid {
+    text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 15px #00FFFF; 
+    animation: pulse 0.6s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }
 
 .detailsabout div{
     padding: 10px 0px;
 }
 
-.projectcounter{
-    margin: 30px 0px 0px 0px !important;
-    font-family: "Lora", serif;
-}
-
-.detailsabout .email-link{
-    color: #0C0C0C !important;
-    text-decoration: none;
-}
-
-.detailsabout .phone-link{
-    color: #0C0C0C !important;
-    text-decoration: none;
-}
-
+.detailsabout .email-link,
+.detailsabout .phone-link,
 .detailsabout .map-link{
-    color: #0C0C0C !important;
+    color: #0C0C0C; /*#0C0C0C !important;*/
     text-decoration: none;
 }
 
 .detailsabout .email-link:hover{
-    color: #0C359E !important;
+    color: #FF1E00 !important;
 }
 
 .detailsabout .phone-link:hover{
-    color: #0C359E !important;
+    color: #FF1E00 !important;
 }
 
 .detailsabout .map-link:hover{
-    color: #0C359E !important;
+    color: #FF1E00 !important;
+}
+
+.projectcounter{
+    margin: 30px 0px 0px 0px !important;
 }
 
 .counterWeb {
@@ -310,14 +423,47 @@ body {
     margin: 0px 20px;
     padding: 20px 0px;
     text-align: center;
-    background-color: #FBFFE4 !important;
+    background-color: #f8f9fa !important;
     border: 2px #fff !important;
 }
 
 .card-text{
     font-weight: 500;
     font-size: 1em;
-    color: #000000 !important;
+    color: #0C0C0C !important;
+}
+
+@media (max-width: 500px) {
+    .abtname p{
+        padding-top: 1%;
+        padding-left: 0%;
+    }
+
+    .pro{
+        padding-left:0px; 
+        padding-top: 12%;  
+    }
+
+    .deatailsInfo{
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        padding: 0px 20px !important;
+    } 
+
+    .detailsabout{
+        font-size: 1em;
+        padding-left: 20px;
+        color: #0C0C0C; 
+        font-weight: 400;
+    }
+
+    .card{
+        margin: 0px 0px;
+        padding: 20px 0px;
+        text-align: center;
+        background-color: #f8f9fa !important;
+        border: 2px #fff !important;
+    }    
 }
 
 /*--------------------------------------------Skills Set---------------------------------------------*/
@@ -326,7 +472,7 @@ body {
     margin: 0px 0px !important;
     padding: 0px 0px !important;
     min-height: 500px !important;
-    background-color: #FBFFE4 !important;
+    background-color: #f8f9fa !important;
     color: #000000 !important;
     user-select: none !important;
 }
@@ -337,13 +483,14 @@ body {
     text-align: center !important;
     margin: 0px -10px 0px -10px !important;
     font-size: 2.5em !important;
-    font-family: "Markazi Text", serif;
+    font-family: "Great Vibes", serif;
     color: #FBFFE4;
 }
 
 .skillsInfo {
     padding: 50px 50px 50px 50px;
     font-family: "Lora", serif !important;
+    font-size: 1em;
 }
 
 .skillsInfo .headerExp{
@@ -363,7 +510,7 @@ body {
 }
 
 .skillsset .progName{
-    font-size: 16px;
+    font-size: 1em
     padding-bottom: 0px;
 }
 
@@ -383,13 +530,34 @@ body {
 .skillsset .progress-bar {
     font-weight: bold;
     line-height: 30px;
-    font-size: 16px;
     transition: width 2s ease-in-out;
 }
 
 .skillsset .progress8 .progress-bar {
-    background-color: #EB5B00 !important; /* Set the background color */
-    color: white !important; /* Ensure text is readable */
+    background-color: #EB5B00 !important; 
+    color: #ffffff !important; 
+}
+
+@media (max-width: 500px) {
+
+    .skillsInfo {
+        padding: 50px 0px 50px 0px;
+        font-family: "Lora", serif !important;
+        font-size: 1em;
+    }
+
+    .skillsInfo .headerExp{
+        margin-left: 0%;
+        padding: 0px 0px 0px 20px;
+        font-size: 1.5em;
+    }
+
+    .skillsInfo .headerinfo{
+        margin-left: 0%;
+        padding: 0px 20px 20px 20px;
+        text-align: justify;
+    }
+
 }
 
 /*--------------------------------------------Experience---------------------------------------------*/
@@ -398,7 +566,7 @@ body {
     margin: 0px 0px !important;
     padding: 0px 0px !important;
     min-height: 500px !important;
-    background-color: #FBFFE4 !important;
+    background-color: #f8f9fa !important;
     color: #000000 !important;
     user-select: none !important;
 }
@@ -409,17 +577,24 @@ body {
     text-align: center !important;
     margin: 0px -10px 0px -10px !important;
     font-size: 2.5em !important;
-    font-family: "Markazi Text", serif;
+    font-family: "Great Vibes", serif;
     color: #FBFFE4;
 }
 
-.experiencename p{
-    text-align: center!important;
-    padding-top: 20%;
-    padding-left: 10%;
-    font-size: 3em;
-    font-family: "Great Vibes", serif;
-    font-weight: 700 !important;
+.experiencename{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    pointer-events: none; 
+    user-select: none; 
+    -webkit-user-drag: none; 
+}
+
+.experienceimg{
+    width: 300px;
+    height: 300px;
+    transform: scaleX(-1);
 }
 
 .experience .experienceInfo{
@@ -444,7 +619,12 @@ body {
     margin: 0 auto !important;
     pointer-events: none; 
     user-select: none; 
-    -webkit-user-drag: none;    
+    -webkit-user-drag: none;  
+    transition: transform 0.5s ease-in-out;
+}
+
+.company-img1:hover {
+    transform: scale(1.2);
 }
 
 .company-img2{
@@ -483,18 +663,15 @@ body {
 
 .jobposition{
     font-size: 20px;
-    text-align: justify;
     font-weight: 700;
 }
 
 .yeardtls{
     font-size: 16px;
-    text-align: justify;
 }
 
 .jobdtl{
     font-size: 14px;
-    text-align: justify;
 }
 
 /*--------------------------------------------Education---------------------------------------------*/
@@ -503,7 +680,7 @@ body {
     margin: 0px 0px !important;
     padding: 0px 0px !important;
     min-height: 500px !important;
-    background-color: #FBFFE4 !important;
+    background-color: #f8f9fa !important;
     color: #000000 !important;
     user-select: none !important;
 }
@@ -514,22 +691,28 @@ body {
     text-align: center !important;
     margin: 0px -10px 0px -10px !important;
     font-size: 2.5em !important;
-    font-family: "Markazi Text", serif;
+    font-family: "Great Vibes", serif;    
     color: #FBFFE4;
+}
+
+.educationname {
+    padding-top: 50px;    
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    pointer-events: none; 
+    user-select: none; 
+    -webkit-user-drag: none;       
+}
+
+.educationimg{
+    width: 300px;
+    height: 300px;
 }
 
 .education .educationInfo{
     font-family: "Lora", serif !important;
     padding: 0px 50px;
-}
-
-.educationname p{
-    text-align: center!important;
-    padding-top: 20%;
-    padding-left: 10%;
-    font-size: 3em;
-    font-family: "Great Vibes", serif;
-    font-weight: 700 !important;
 }
 
 .education .headerExp{
@@ -565,28 +748,24 @@ body {
 
 .educationPost{
     font-size: 20px;
-    text-align: justify;
     font-weight: 700;
     margin: 10px 0px;
 }
 
 .yeardtls{
-    font-size: 16px;
-    text-align: justify;
+    font-size: 15px;
     padding: 0px !important;
     margin: 0px !important;
     font-weight: 600;
 }
 .yeardtls1{
     font-size: 14px;
-    text-align: justify;
     padding: 0px !important;
     margin: 0px !important;
     font-weight: 600;
 }
 .yeardtls2{
     font-size: 14px;
-    text-align: justify;
     padding: 0px !important;
     margin: 0px !important;
     font-weight: 600;
@@ -598,7 +777,7 @@ body {
     margin: 0px 0px !important;
     padding: 0px 0px !important;
     min-height: 500px !important;
-    background-color: #FBFFE4 !important;
+    background-color: #f8f9fa !important;
     color: #000000 !important;
     user-select: none;
 }
@@ -609,43 +788,54 @@ body {
     text-align: center !important;
     margin: 0px -10px 0px -10px !important;
     font-size: 2.5em !important;
-    font-family: "Markazi Text", serif;
+    /*font-family: "Markazi Text", serif;*/
+    font-family: "Great Vibes", serif;
     color: #FBFFE4;
 }
 
-.contactusname p{
-    text-align: center!important;
-    padding-top: 20%;
-    padding-left: 10%;
-    font-size: 3em;
-    font-family: "Great Vibes", serif;
-    font-weight: 700 !important;
-}
-
 .contactus .headerExp{
-    padding: 50px 0px 50px 50px;
+    padding: 30px 0px 30px 0px;
     font-size: 2em;
+    text-align: center;
 }
 
 .contInfo{
     margin-top: 50px !important;
     margin-bottom: 50px !important;
     font-family: "Lora", serif !important;
-    padding: 0px 50px;
+}
+
+.container-center{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 }
 
 .condetails{
     font-family: "Lora", serif;
     font-size: 17px;
-    margin: 50px 0px;
+    margin: 30px 0px;
     transition: all 0.5s ease-in-out;
     padding: 0px 50px;
+    color: #0C0C0C;  
 }
 
 .condetails .fa-solid{
-    padding-right: 20px;
+    padding-right: 30px;
     font-size: 2.5em;
-    transition: transform 0.9s ease-in-out;
+    transition: transform 0.9s ease-in-out;  
+}
+
+.condetails .fa-location-dot{
+    color: #FF1E00;
+}
+
+.condetails .fa-envelope{
+    color: #FF0063;
+}
+
+.condetails .fa-phone{
+    color: #1C6DD0;
 }
 
 /* Rotate 360° on hover */
@@ -658,13 +848,17 @@ body {
     transform: rotate(0deg);
 }
 
+.condetails .concol2{
+    padding-left: 30px;
+}
+
 .condetails strong{
     font-size: 1.8em;
 }
 
 .condetails .contAdd{
     font-size: 1em;
-    margin: 10px 0px;
+    margin: 5px 0px;
 }
 
 .condetails .contAdd .map-link{
@@ -678,7 +872,7 @@ body {
 
 .condetails .contmail{
     font-size: 1em;
-    margin: 10px 0px;
+    margin: 5px 0px;
 }
 
 .condetails .contmail .email-link{
@@ -692,7 +886,7 @@ body {
 
 .condetails .contph{
     font-size: 1em;
-    margin: 10px 0px;
+    margin: 5px 0px;
 }
 
 .condetails .contph .phone-link{
@@ -706,51 +900,69 @@ body {
 
 
 .socialgroup{
-    margin: 50px 0px;
+    padding: 30px 40px;
 }
 
 .socialgroup button{
-    margin: 0px 15px !important;
+    margin: 0px 10px !important;
+    border-radius: 50%;
 }
 
 .socialgroup .fbic{
     padding: 2px 2px;
-    font-size: 2.5em;
+    font-size: 2em;
+    transition: 0.6s ease-in-out;
 }
 
 .socialgroup .fb:hover,
 .socialgroup .fb .fbic:hover {
     color: #3e65cf;
+    animation: shake 0.3s ease-in-out infinite;
 }
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+
 
 .socialgroup .gmic{
     padding: 2px 2px;
-    font-size: 2.5em;
+    font-size: 2em;
+    transition: 0.6s ease-in-out;
 }
 
 .socialgroup .gmail:hover,
 .socialgroup .gmail .gmic:hover {
     color: #c71610;
+    animation: shake 0.3s ease-in-out infinite;
 }
 
 .socialgroup .waspic{
     padding: 2px 2px;
-    font-size: 2.5em;
+    font-size: 2em;
+    transition: 0.6s ease-in-out;
 }
 
 .socialgroup .whatsapp:hover,
 .socialgroup .whatsapp .waspic:hover {
     color: #25d366;
+    animation: shake 0.3s ease-in-out infinite;
 }
 
 .socialgroup .lnkic{
     padding: 2px 2px;
-    font-size: 2.5em;
+    font-size: 2em;
+    transition: 0.6s ease-in-out;
 }
 
 .socialgroup .linkdn:hover,
 .socialgroup .linkdn .lnkic:hover {
     color: #0077B5;
+    animation: shake 0.3s ease-in-out infinite;
 }
 
 .socialgroup .fb{
@@ -789,3 +1001,25 @@ body {
 
 /*-------------------------------------------------------------------------------------------------------------------------*/
 
+
+/*
+.IntroDash  .skills {
+    margin: 20px 0px 0px 0px !important;
+    font-family: "Lora", serif;
+    font-size: 1.2em !important;
+    font-style: normal;
+    font-weight: 300;
+
+    color: #000;
+    background: linear-gradient(45deg, #ffffff, #000000);
+    background-size: 200% 100%; 
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; 
+    animation: colorMove 5s linear infinite;
+}
+
+@keyframes colorMove {
+    0% { background-position: 100% 0; }
+    100% { background-position: -100% 0; }
+}*/
