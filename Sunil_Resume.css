@@ -238,7 +238,7 @@ body {
     transition: left 0.4s ease-in-out;
 }
 
-@media (max-width: 500px) {
+@media (min-width: 381px) and (max-width: 500px) {
     .landingpage{
         padding: 100px 50px !important;
         min-height: 800px !important;
@@ -257,6 +257,7 @@ body {
         font-size: 4em !important;
         font-weight: 700;
     }
+
     .IntroDash .designation{
         margin: 20px 0px 0px 0px !important;
         font-size: 2em !important;
@@ -271,6 +272,39 @@ body {
         padding: 10px 10px;
         margin: 30px 10px 80px 10px;
     } 
+}
+
+@media (max-width: 380px) {
+    .landingpage{
+        padding: 50px 0px !important;
+        min-height: 800px !important;
+    }
+
+    .IntroDash .hello{
+        font-size: 3.5em !important;
+        font-weight: 400;
+    }
+
+    .IntroDash .name{
+        margin: 10px 0px 0px 0px !important;
+        font-size: 3em !important;
+        font-weight: 700;
+    }   
+
+    .IntroDash .designation{
+        margin: 20px 0px 0px 0px !important;
+        font-size: 1.5em !important;
+        font-weight: 500;
+    }
+
+    .IntroDash .skills{
+        font-size: 0.9em !important;
+    }
+
+    .cvbtngrp .btncv, .cvbtngrp .btnhire {   
+        padding: 10px 10px;
+        margin: 20px 10px 20px 10px;
+    }     
 }
 
 /*--------------------------------------------About ME---------------------------------------------*/
@@ -674,6 +708,60 @@ body {
     font-size: 14px;
 }
 
+@media (max-width: 381px){
+
+    .experience .headerinfo{
+        font-size: 1em;
+        text-align: justify;
+        margin-bottom: 50px !important;
+    }
+
+    .experienceimg{
+        width: 200px;
+        height: 200px;
+        transform: scaleX(-1);
+    }
+
+    .company-img1{
+        height: 80px;
+        width: 180px;
+    }  
+
+    .company-img2{
+        height: 100px;
+        width: 100px;   
+    }
+
+    .company-img3{
+        height: 100px;
+        width: 100px;
+    }
+
+    .company-img4{
+        height: 100px;
+        width: 150px;  
+    }
+
+    .job{
+        margin: 20px 0px 20px 0px;
+    }
+
+    .jobposition{
+        font-size: 18px;
+        font-weight: 600;
+        margin:10px 0px;
+    }
+
+    .yeardtls{
+        font-size: 15px;        
+    }
+
+    .jobdtl{
+        font-size: 13px;
+        margin:10px 0px !important;  
+    }    
+}
+
 /*--------------------------------------------Education---------------------------------------------*/
 
 .education{
@@ -769,6 +857,42 @@ body {
     padding: 0px !important;
     margin: 0px !important;
     font-weight: 600;
+}
+
+@media (max-width: 381px){
+    .educationimg{
+        width: 250px;
+        height: 250px;
+    }
+
+    .education-img1{
+        height: 150px;
+        width: 200px;    
+    }
+
+    .education-img2{
+        height: 150px;
+        width: 150px;   
+    } 
+
+    .educationPost{
+        font-size: 18px;
+        font-weight: 600;
+        margin: 10px 0px;
+    }
+
+    .yeardtls{
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .yeardtls1{
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .yeardtls2{
+        font-size: 14px;
+        font-weight: 600;
+    }
 }
 
 /*--------------------------------------------Contact US---------------------------------------------*/
@@ -983,6 +1107,91 @@ body {
 .socialgroup .linkdn{
     background-color: #0077B5;
     color: #ffffff;
+}
+
+
+@media (min-width: 387px) and (max-width: 500px)
+{
+    .contactus .headerExp{
+        font-size: 1.8em;
+    }
+
+}
+
+@media (max-width: 387px){
+
+    .contactus .headerExp{
+        font-size: 1.2em;
+    }
+
+    .contInfo{
+        margin-top: 50px !important;
+        margin-bottom: 0px !important;
+    }
+
+    .condetails .fa-solid{
+        padding:0px 0px 0px 20px;
+        font-size: 2.2em;
+        transition: transform 0.9s ease-in-out;  
+    }
+
+    .condetails .concol2{
+        padding-left: 0px;
+    }
+
+    .condetails strong{
+        font-size: 0.9em;
+    }
+
+    .condetails .contAdd{
+        font-size: 0.9em;
+        margin: 5px 0px;
+    }    
+
+    .condetails .contmail{
+        font-size: 0.9em;
+        margin: 5px 0px;
+    }    
+
+    .condetails .contph{
+        font-size: 0.9em;
+        margin: 5px 0px;
+    }
+
+    .socialgroup{
+        padding: 0px 0px;
+    }
+
+    .socialgroup button{
+        margin: 20px 1px !important;
+        border-radius: 50%;
+    }
+
+    .socialgroup .fbic{
+        padding: 1px 1px;
+        font-size: 0.9em;
+        transition: 0.6s ease-in-out;
+    } 
+    
+    .socialgroup .gmic{
+        padding: 1px 1px;
+        font-size: 0.9em;
+        transition: 0.6s ease-in-out;
+    }
+
+    .socialgroup .waspic{
+        padding: 1px 1px;
+        font-size: 0.9em;
+        transition: 0.6s ease-in-out;
+    }
+
+    .socialgroup .lnkic{
+        padding: 1px 1px;
+        font-size: 0.9em;
+        transition: 0.6s ease-in-out;
+    }  
+
+
 }
 
 /*--------------------------------------------Contact US---------------------------------------------*/
