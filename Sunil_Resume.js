@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const text = `Building Scalable .NET, Web API, AWS, and Microservices Solutions | Experienced in React, JavaScript & More! `;
 
     const typingSpeed = 50;
-    const delayBeforeRestart = 5000000;
+    const delayBeforeRestart = 5000;
 
     function typeEffect(index = 0) {
         if (index < text.length) {
