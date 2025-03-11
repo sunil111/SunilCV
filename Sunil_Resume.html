@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css" integrity="sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<!-- Jquery-->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -35,6 +36,8 @@
 
 	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Markazi+Text:wght@400..700&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
 
 </head>
 <body>
@@ -66,6 +69,9 @@
 	        		<li class="nav-item item6">
 	          			<a class="nav-link" aria-current="page" href="#contactus">Contact</a>
 	        		</li>
+					<li class="nav-item item7">
+            			<a class="nav-link" id="darkModeToggle">🌙</a>
+        			</li>        		
 	      		</ul>
 	    	</div>
 	  	</div>
@@ -77,7 +83,10 @@
     		<h1 class="hello">Hello, I am</h1>
 	        <h1 class="name">Sunil Langhi</h1>
 	        <h3 class="designation">Software Developer</h3>
-	        <p class="skills">Building Scalable .NET, Web API, AWS, and Microservices Solutions | Experienced in React, JavaScript & More!</p>
+	        <!--p class="skills">Building Scalable .NET, Web API, AWS and Microservices Solutions | Experienced in React, JavaScript & More!</p-->
+
+			<p class="skills"></p>
+
 			<div class="cvbtngrp" role="group" aria-label="Default button group">
 			  	<button type="button" class="btn btncv" onclick="downloadPDF()">Download CV</button>
 			  	<a type="button" class="btn btnhire" href="#contactus">Hire Me</a>
@@ -86,9 +95,9 @@
        	</div>
     	<div class="profile-img-container col-lg-4 col-md-5 col-sm-12 text-center">
         	<img src="Image/img8.png" alt="Sunil Photo" class="profile-img animate__animated animate__zoomIn">
-    	</div>
+    	</div>   	
     </section>
-
+       
 	<!-- About Us Page -->
     <section id="aboutus" class="aboutus animate__animated animate__fadeIn row">
     	<div class="col-12">
@@ -170,7 +179,7 @@
 				</div>
 
 			</div>
-    	</div>
+    	</div>  	
     </section>
 
     <!-- Skills Page -->
@@ -194,55 +203,124 @@
     		
 	      	<div class="container">
 		        <div class="row">
-		            <div class="col-lg-12 col-md-12 col-sm-12">
-		                <p class="progName"><strong>.NET WEB API</strong>(Framework5,8)<strong>, MVC4, ORM Tools</strong>(Dapper, Entity Framework)</p>
-		                <div class="progress">
-		                    <div class="progress-bar bg-primary animate__animated animate__slideInLeft" style="width: 80%;">80%</div>
-		                </div>
-		            </div>
-		            <div class="col-lg-12 col-md-12 col-sm-12">
-		                <p class="progName"><strong>JavaScript, jQuery, HTML, CSS</strong></p>
-		                <div class="progress">
-		                    <div class="progress-bar bg-success animate__animated animate__slideInLeft" style="width: 55%;">55%</div>
-		                </div>
-		            </div>
-		            <div class="col-lg-12 col-md-12 col-sm-12">
-		                <p class="progName"><strong>React JS, Bootstrap</strong></p>
-		                <div class="progress">
-		                    <div class="progress-bar bg-info animate__animated animate__slideInLeft" style="width: 50%;">50%</div>
-		                </div>
-		            </div>
-		            <div class="col-lg-12 col-md-12 col-sm-12">
-		                <p class="progName"><strong>Database(MSSQL Server 2012, 2014, 2022)</strong></p>
-		                <div class="progress">
-		                    <div class="progress-bar bg-warning animate__animated animate__slideInLeft" style="width: 65%;">65%</div>
-		                </div>
-		            </div>
-		            <div class="col-lg-12 col-md-12 col-sm-12">
-		                <p class="progName"><strong>AWS</strong> (S3, IAM, Lambda, Elastic Beanstalk, ECS, EC2, SQS, SNS, SES, Event Bridge, RDS)</p>
-		                <div class="progress">
-		                    <div class="progress-bar bg-danger animate__animated animate__slideInLeft" style="width: 70%;">70%</div>
-		                </div>
-		            </div>
-		            <div class="col-lg-12 col-md-12 col-sm-12">
-		                <p class="progName"><strong>Docker, CI/CD with GitHub & AWS</strong></p>
-		                <div class="progress">
-		                    <div class="progress-bar bg-dark animate__animated animate__slideInLeft" style="width: 75%;">75%</div>
-		                </div>
-		            </div>
-					<div class="col-lg-12 col-md-12 col-sm-12">
-		                <p class="progName"><strong>Testing Tools: Postman, Swagger</strong></p>
-		                <div class="progress progress8">
-		                    <div class="progress-bar animate__animated animate__slideInLeft" style="width: 70%;">70%</div>
-		                </div>
-		            </div>
-					<div class="col-lg-12 col-md-12 col-sm-12">
-		                <p class="progName"><strong>OWASP Security Practices</strong></p>
-		                <div class="progress">
-		                    <div class="progress-bar bg-secondary animate__animated animate__slideInLeft" style="width: 70%;">70%</div>
-		                </div>
-		                <p class="progNameDtls">(Authentication, Input Validation, Rate Limiting, Secure Communication, Error Handling etc.)</p>
-		            </div>
+
+		        	<div class="col-lg-3 col-md-6 col-sm-12">
+		        		<div class="card">
+						  	<img src="Image/dotnet.png" class="skillsImg" alt=".NET Web API">
+						  	<div class="card-body">
+						  		<div class="cardname">
+									<p class="progName"><strong>.NET WEB API</strong>(Framework5,8)<strong>, MVC4, ORM Tools</strong>(Dapper, Entity Framework)</p>
+								</div>
+		                		<div class="progress">
+		                    		<div class="progress-bar bg-primary animate__animated animate__slideInLeft" style="width: 80%;">80%</div>
+		                		</div>
+						  	</div>
+						</div>
+		        	</div>
+
+		        	<div class="col-lg-3 col-md-6 col-sm-12">
+		        		<div class="card">
+						  	<img src="Image/Html_JS_Css.jpg" class="skillsImg" alt="Html JS Css">
+						  	<div class="card-body">
+						  		<div class="cardname">
+				                	<p class="progName"><strong>JavaScript, jQuery, HTML, CSS</strong></p>
+				                </div>
+				                <div class="progress">
+				                    <div class="progress-bar bg-success animate__animated animate__slideInLeft" style="width: 55%;">55%</div>
+				                </div>
+						  	</div>
+						</div>
+		        	</div>
+
+		        	<div class="col-lg-3 col-md-6 col-sm-12">
+		        		<div class="card">
+						  	<img src="Image/ReactJS_Bootstrap.png" class="skillsImg" alt="ReactJS Bootstrap">
+						  	<div class="card-body">
+						  		<div class="cardname">
+				                	<p class="progName"><strong>Bootstrap, React JS </strong></p>
+				                </div>
+				                <div class="progress">
+				                    <div class="progress-bar bg-info animate__animated animate__slideInLeft" style="width: 50%;">50%</div>
+				                </div>
+						  	</div>
+						</div>
+		        	</div>
+
+		        	<div class="col-lg-3 col-md-6 col-sm-12">
+		        		<div class="card">
+						  	<img src="Image/MSSQL.jpg" class="skillsImg" alt="MSSQL">
+						  	<div class="card-body">
+						  		<div class="cardname">
+				                	<p class="progName">
+				                		<strong>Database(MSSQL Server 2012, 2014, 2022)</strong>
+				                	</p>
+				            	</div>
+				                <div class="progress">
+				                    <div class="progress-bar bg-danger animate__animated animate__slideInLeft" style="width: 65%;">65%</div>
+				                </div>
+						  	</div>
+						</div>
+		        	</div>	
+
+
+		        	<div class="col-lg-3 col-md-6 col-sm-12">
+		        		<div class="card">
+						  	<img src="Image/AWS.jpg" class="skillsImg" alt="AWS">
+						  	<div class="card-body">
+						  		<div class="cardname">
+				                	<p class="progName"><strong>AWS</strong> (S3, IAM, Lambda, Elastic Beanstalk, ECS, EC2, SQS, SNS, SES, Event Bridge, RDS)</p>
+				                </div>
+				                <div class="progress">
+				                    <div class="progress-bar bg-warning animate__animated animate__slideInLeft" style="width: 70%;">70%</div>
+				                </div>
+						  	</div>
+						</div>
+		        	</div>		        	
+
+		        	<div class="col-lg-3 col-md-6 col-sm-12">
+		        		<div class="card">
+						  	<img src="Image/Docker.png" class="skillsImg" alt="Docker">
+						  	<div class="card-body">
+						  		<div class="cardname">
+				                	<p class="progName"><strong>Docker, CI/CD with GitHub & AWS</strong></p>
+				                </div>
+				                <div class="progress">
+				                    <div class="progress-bar bg-dark animate__animated animate__slideInLeft" style="width: 75%;">75%</div>
+				                </div>
+						  	</div>
+						</div>
+		        	</div>	
+
+		        	<div class="col-lg-3 col-md-6 col-sm-12">
+		        		<div class="card">
+						  	<img src="Image/TestingTools.png" class="skillsImg" alt="TestingTools">
+						  	<div class="card-body">
+						  		<div class="cardname">
+				                	<p class="progName"><strong>Testing Tools: Swagger, Postman</strong></p>
+				                </div>
+				                <div class="progress progress8">
+				                    <div class="progress-bar animate__animated animate__slideInLeft" style="width: 70%;">70%</div>
+				                </div>
+						  	</div>
+						</div>
+		        	</div>	
+
+		        	<div class="col-lg-3 col-md-6 col-sm-12">
+		        		<div class="card">
+						  	<img src="Image/OWASP.jpg" class="skillsImg" alt="OWASP Security">
+						  	<div class="card-body">
+						  		<div class="cardname">
+				                	<p class="progName"><strong>OWASP Security Practices</strong>
+				                	<p class="progNameDtls">(Authentication, Input Validation, Rate Limiting, Secure Communication, Error Handling etc.)</p>	
+				                	</p>
+				                </div>
+				                <div class="progress">
+				                    <div class="progress-bar bg-secondary animate__animated animate__slideInLeft" style="width: 70%;">70%</div>
+				                </div>
+						  	</div>
+						</div>
+		        	</div>			        	
+
 		        </div>
 	    	</div>
     	</div>
@@ -324,94 +402,122 @@
     	<div class="educationInfo col-lg-8 col-md-12 col-sm-12">
     		<strong><p class="headerExp">My Education Background</p></strong>
     		<p class="headerinfo">I hold a Master of Computer Applications (MCA) from MET Institute of Computer Science, Mumbai University (2016), where I earned with a 6.75 CGPA, gaining expertise in software development and emerging technologies. Prior to that, I completed my Bachelor of Science (B.Sc.) in Computer Science from University of Mumbai (2014), which strengthened my understanding of programming, algorithms, and system design.</p>
-    		<div class="col-12 edu">
-    			<div class="row">
-		    		<div class="col-12">
-		    			<img src="Image/MET.png" alt="MET" class="education-img1">
-		    			<strong><p class="educationPost">Mumbai Education Trust(MET) College</p></strong>
-		    			<p class="yeardtls">Master Of Computer Application(MCA)</p>
-		    			<p class="yeardtls1">Mumbai University</p>
-		    			<p class="yeardtls2">June 2016</p>
-		    		</div>
-	    		</div>
-	    	<div>
-	    	<hr>	
-	    	<div class="col-12 edu">
-    			<div class="row">
-		    		<div class="col-12">
-		    			<img src="Image/RKT.png" alt="MET" class="education-img2">
-		    			<strong><p class="educationPost">R. K. Talreja College</p></strong>
-		    			<p class="yeardtls">Bachelor of Science in Computer Science(BSC CS)</p>
-		    			<p class="yeardtls1">Mumbai University</p>
-		    			<p class="yeardtls2">June 2014</p>
-		    		</div>
-	    		</div>
-	    	<div> 
-    	</div>
+			<div class="container_">
+			  	<h3 class="Timeline">
+			  		Education Timeline
+			  	</h3>
+
+			  	<div class="vertical_progress">
+			    	<div style="--number:'2016';--col-row-number:1" class="progress_cards">
+						<img src="Image/MET.png" alt="MET" class="education-img1">
+			    		<strong><p class="educationPost">Mumbai Education Trust(MET) College</p></strong>
+			    		<p class="yeardtls">Master Of Computer Application(MCA)</p>
+			    		<p class="yeardtls1">Mumbai University</p>
+			    		<p class="yeardtls2">June 2016</p>
+			    	</div>
+			    	<div style="--number:'2014';--col-row-number:2" class="progress_cards">
+			    		<img src="Image/RKT.png" alt="MET" class="education-img2">
+			    		<strong><p class="educationPost">R. K. Talreja College</p></strong>
+			    		<p class="yeardtls">Bachelor of Science in Computer Science(BSC CS)</p>
+			    		<p class="yeardtls1">Mumbai University</p>
+			    		<p class="yeardtls2">June 2014</p>
+			    	</div>
+			  	</div>
+			</div>
+		</div>
     </section>
 
 	<!-- Contact Me Page -->
-    <section id="contactus" class="contactus animate__animated animate__fadeIn row">
-    	<div class="col-12">
-    		<p class="header">Contact Me</p>
-    	</div>
-    	<div class="container-center">
-    	<div class="contInfo">
-    		<strong><p class="headerExp">Lets Keep In Touch</p></strong>
+    <section class="wavepart animate__animated animate__fadeIn row">
+		<div class="oceanwave">
+  			<div class="wave"></div>
+  			<div class="wave"></div>
+  			<div class="wave"></div>
+		</div>
+	</section>
 
-    		<div class="address row condetails">
-    			<div class="concol1 col-1 d-flex align-items-center justify-content-center">
-    				<i class="fa-solid fa-location-dot"></i>
-    			</div>
-    			<div class="concol2 col-11">
-    				<strong>Address</strong> 
-    				<p class="contAdd">
-    					<a href="https://www.google.com/maps?q=Badlapur,Thane" target="_blank"class="map-link">Badlapur, Thane, Maharashtra, India </a>   
-    				</p> 				
-    			</div>
-    		</div>
+	<section id="contactus" class="contactus animate__animated animate__fadeIn row">
+		<div class="ocean">
+	        <img src="Image/fish14.gif" alt="Fish" class="fish fish-ltr" style="top: 20%; animation-duration: 25s;">
+	        <img src="Image/fish15.gif" alt="Fish" class="fish fish-ltr" style="top: 40%; animation-duration: 40s;">
+	        <img src="Image/fish11.gif" alt="Fish" class="fish fish-rtl" style="top: 70%; animation-duration: 15s;">
 
-    		<div class="address row condetails">
-    			<div class="concol1 col-1 d-flex align-items-center justify-content-center">
-    				<i class="fa-solid fa-envelope"></i>
-    			</div>
-    			<div class="concol2 col-11">
-    				<strong>Email</strong> 
-					<p class="contmail">
-					    <a href="mailto:langhi.sun9327@gmail.com" class="email-link">langhi.sun9327@gmail.com</a>
-					</p>    				
-    			</div>
-    		</div>
+	        <img src="Image/fish12.gif" alt="Fish" class="fish fish-rtl" style="top: 30%; animation-duration: 45s;">
+	        <img src="Image/fish13.gif" alt="Fish" class="fish fish-rtl" style="top: 50%; animation-duration: 20s;">
+	        
+	        <div class="bubble bubble1"></div>
+	        <div class="bubble bubble2"></div>
+	        <div class="bubble bubble3"></div>
+	        <div class="bubble bubble4"></div>
 
-    		<div class="address row condetails">
-    			<div class="concol1 col-1 d-flex align-items-center justify-content-center">
-    				<i class="fa-solid fa-phone"></i>
-    			</div>
-    			<div class="concol2 col-11">
-    				<strong>Phone</strong> 
-					<p class="contph">
-        				<a href="tel:+919860937724" class="phone-link">+91 9860937724</a>
-    				</p>
-    			</div>
-    		</div>
-	    	<div class="socialgroup  d-flex justify-content-center">
-		  		<button type="button" class="btn fb" onclick="window.open('https://m.facebook.com/langhi.sun/', '_blank')"><i class="fbic fa-brands fa-square-facebook"></i></button>
+	        <img src="Image/turtle-unscreen.gif" alt="Turtle" class="turtle">
+			<img src="Image/octopus-unscreen.gif" alt="octopus" class="octopus">
+	        <img src="Image/seaweed.png" alt="seaweed" class="seaweed">
+			<img src="Image/seaweed1.png" alt="seaweed" class="seaweed1">
 
-		  		<button type="button" class="btn gmail" onclick="window.location.href='mailto:langhi.sun9327@gmail.com'"><i class="gmic fa-solid fa-envelope"></i></button>
+	    	<div class="col-12">
+	    		<p class="header">Contact Me</p>
+	    	</div>
+	    	<div class="container-center">
+		    	<div class="contInfo">
+		    		<strong><p class="headerExp">Lets Keep In Touch</p></strong>
 
-		  		<button type="button" class="btn whatsapp" <button type="button" class="btn whatsapp" onclick="window.open('https://wa.me/919860937724', '_blank')"><i class="waspic fa-brands fa-whatsapp"></i></button>
+		    		<div class="address row condetails">
+		    			<div class="concol1 col-1 d-flex align-items-center justify-content-center">
+		    				<i class="fa-solid fa-location-dot"></i>
+		    			</div>
+		    			<div class="concol2 col-11">
+		    				<strong>Address</strong> 
+		    				<p class="contAdd">
+		    					<a href="https://www.google.com/maps?q=Badlapur,Thane" target="_blank"class="map-link">Badlapur, Thane, Maharashtra, India </a>   
+		    				</p> 				
+		    			</div>
+		    		</div>
 
-		  		<button type="button" class="btn linkdn" onclick="window.open('https://www.linkedin.com/in/sunil-langhi-483a2b120', '_blank')"><i class="lnkic fa-brands fa-linkedin"></i></button>
-	  		</div>
-    	</div>
-    	</div>
+		    		<div class="address row condetails">
+		    			<div class="concol1 col-1 d-flex align-items-center justify-content-center">
+		    				<i class="fa-solid fa-envelope"></i>
+		    			</div>
+		    			<div class="concol2 col-11">
+		    				<strong>Email</strong> 
+							<p class="contmail">
+							    <a href="mailto:langhi.sun9327@gmail.com" class="email-link">langhi.sun9327@gmail.com</a>
+							</p>    				
+		    			</div>
+		    		</div>
+
+		    		<div class="address row condetails">
+		    			<div class="concol1 col-1 d-flex align-items-center justify-content-center">
+		    				<i class="fa-solid fa-phone"></i>
+		    			</div>
+		    			<div class="concol2 col-11">
+		    				<strong>Phone</strong> 
+							<p class="contph">
+		        				<a href="tel:+919860937724" class="phone-link">+91 9860937724</a>
+		    				</p>
+		    			</div>
+		    		</div>
+			    	<div class="socialgroup  d-flex justify-content-center">
+				  		<button type="button" class="btn fb" onclick="window.open('https://m.facebook.com/langhi.sun/', '_blank')"><i class="fbic fa-brands fa-square-facebook"></i></button>
+
+				  		<button type="button" class="btn gmail" onclick="window.location.href='mailto:langhi.sun9327@gmail.com'"><i class="gmic fa-solid fa-envelope"></i></button>
+
+				  		<button type="button" class="btn whatsapp" <button type="button" class="btn whatsapp" onclick="window.open('https://wa.me/919860937724', '_blank')"><i class="waspic fa-brands fa-whatsapp"></i></button>
+
+				  		<button type="button" class="btn linkdn" onclick="window.open('https://www.linkedin.com/in/sunil-langhi-483a2b120', '_blank')"><i class="lnkic fa-brands fa-linkedin"></i></button>
+			  		</div>
+		    	</div>
+	    	</div>
+
+	    </div>
     </section>
 
+    <!-- Footer -->
     <section class="footer">
 		<div class="row footertext">
     		<p class="footertext1">Design By - Sunil Langhi / 2025@All rights reserved</p>
     	</div>    	
     </section>
+
 </body>
 </html>
-

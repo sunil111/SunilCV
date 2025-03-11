@@ -141,6 +141,73 @@ function downloadPDF() {
 //------------------------------------------------
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    
+    darkModeToggle.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+
+        // Toggle button text dynamically
+        if (document.body.classList.contains("dark-mode")) {
+            darkModeToggle.innerHTML = "☀️";
+        } else {
+            darkModeToggle.innerHTML = "🌙";
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const skillsElement = document.querySelector(".skills");
+
+    if (!skillsElement) {
+        console.error("Error: .skills element not found!");
+        return;
+    }
+
+    const text = `Building Scalable .NET, Web API, AWS, and Microservices Solutions | Experienced in React, JavaScript & More! `;
+
+    const typingSpeed = 50;
+    const delayBeforeRestart = 5000000;
+
+    function typeEffect(index = 0) {
+        if (index < text.length) {
+            skillsElement.innerHTML = text.slice(0, index + 1);
+            setTimeout(() => typeEffect(index + 1), typingSpeed);
+        } else {
+            setTimeout(() => {
+                skillsElement.innerHTML = "";
+                typeEffect(0);
+            }, delayBeforeRestart);
+        }
+    }
+
+    typeEffect();
+});
+
+
+
+
+
+// Select fish images for eye blinking
+// const fishList = ['fish1', 'fish2', 'fish3', 'fish4', 'fish5'];
+// setInterval(() => {
+//     let fish = document.getElementById(fishList[Math.floor(Math.random() * fishList.length)]);
+//     fish.src = fish.src.includes("open") ? "fish-closed.svg" : "fish-open.svg";
+// }, 3000);
+
+// // Octopus Blinking
+// setInterval(() => {
+//     let octopus = document.getElementById("octopus");
+//     octopus.src = octopus.src.includes("open") ? "octopus-closed.svg" : "octopus-open.svg";
+// }, 4000);
+
+// // Turtle Hide & Show
+// setInterval(() => {
+//     let turtle = document.getElementById("turtle");
+//     turtle.src = turtle.src.includes("out") ? "turtle-in.svg" : "turtle-out.svg";
+// }, 5000);
+
+
 /*document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".fire-btn");
 
