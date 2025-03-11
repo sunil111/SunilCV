@@ -1638,8 +1638,16 @@ body {
 @media(max-width:355px){
     .wavepart{
         margin-top: 0px !important;
-        margin-bottom: -30px !important;
+        margin-bottom: -50px !important;
     }   
+
+    .contactus .header{
+        margin-top: 0px !important;
+        padding-top: 150px !important;
+        text-align: center !important;
+        font-size: 3.5em !important;
+        font-family: "Great Vibes", serif;
+    }
 
 }
 
