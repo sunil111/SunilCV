@@ -1403,8 +1403,17 @@ body {
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
     color: #000000 !important;
     position: relative;
+    min-height: 80px !important;
     background-color: #f8f9fa !important; /*f8f9fa*/
-    box-shadow: 0 1px 0 #0b3c6c !important;
+    
+    box-shadow: none !important;
+    overflow: hidden;
+    border-bottom: none;
+    background-clip: content-box;
+    margin-bottom: -2px !important;
+    margin-top: -2px !important;
+
+
 }
 
 .wavepart .oceanwave {
@@ -1463,6 +1472,10 @@ body {
     }
 
 }
+
+
+
+
 
 
 .contactus {
@@ -2297,7 +2310,7 @@ body {
 /*---------------------------------------- Dark Mode Contact Us -----------------------------------------*/
 
 .dark-mode .contactus{
-    background-color: #003161 !important;
+    background-color: #0b3c6c !important;
     color: #ffffff !important;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;      
 }
@@ -2333,3 +2346,4 @@ body {
 .dark-mode .wavepart{
     background-color: #121212 !important;
 }
+
