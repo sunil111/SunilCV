@@ -257,7 +257,6 @@ body {
     animation: typing 9s infinite, cursor 1s infinite;     
 }*/
 
-
 .IntroDash .skills{
     margin: 20px 0px 0px 0px !important;
     font-family: "Lora", serif;
@@ -331,17 +330,19 @@ body {
     position: relative;
     overflow: hidden;
     border: 2px solid transparent;
-    transition: background 0.4s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: background 0.4s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .cvbtngrp .btncv {
     background-color: #6528F7;
     border-color: #6528F7;
+    transition: transform 0.3s ease-in-out;
 }
 
 .cvbtngrp .btnhire {
     background-color: #06D001;
     border-color: #06D001;
+    transition: transform 0.3s ease-in-out;
 }
 
 .cvbtngrp .btncv::after, 
@@ -1465,7 +1466,7 @@ body {
 
     .contactus .header{
         margin-top: 0px !important;
-        padding-top: 150px !important;
+        padding-top: 50px !important;
         text-align: center !important;
         font-size: 3.5em !important;
         font-family: "Great Vibes", serif;

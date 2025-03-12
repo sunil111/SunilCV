@@ -187,7 +187,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
 // Select fish images for eye blinking
 // const fishList = ['fish1', 'fish2', 'fish3', 'fish4', 'fish5'];
 // setInterval(() => {
